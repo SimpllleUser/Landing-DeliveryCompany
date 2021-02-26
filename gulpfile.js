@@ -48,18 +48,18 @@ function clean() {
 // }
 
 function scss(){
-    return gulp.src('./src/scss/**/*.scss')
+    return gulp.src('./css/**/*.scss',{allowEmpty:true})
         .pipe(sass())
-        .pipe(gulp.dest('./build/css'))
+        .pipe(gulp.dest('./css/'))
         .pipe(browserSync.stream())   
 }
 
 function scripts() {
     console.log("scripts")
-    return gulp.src(jsFiles)
+    return gulp.src(jsFiles,{allowEmpty:true})
         .pipe(concat('script.js'))
         .pipe(uglify({ toplevel: true }))
-        .pipe(gulp.dest('./build/js'))
+        .pipe(gulp.dest('./js/'))
         .pipe(browserSync.stream());
 }
 
@@ -71,8 +71,8 @@ function watch() {
     });
     //Отслеживать файлы по этому пути 
     // gulp.watch('./src/css/**/*css', styles);
-    gulp.watch('./src/scss/**/*scss',scss)
-    gulp.watch('./src/js/**/*js', scripts);
+    gulp.watch('./css/*scss',scss)
+    gulp.watch('./js/*js', scripts);
     gulp.watch("./*.html").on('change', browserSync.reload);
 }
 
