@@ -233,10 +233,13 @@ h2 {
       overflow: hidden;
       display: flex;
 
+      //  --- kill dots
+
       .splide__pagination {
         display: none;
         position: absolute;
       }
+      //  /--- kill dots
 
       .slider-navigation {
         margin-left: initial;
