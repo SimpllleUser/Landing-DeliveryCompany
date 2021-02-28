@@ -209,9 +209,21 @@ h2 {
     }
     .screen-mouse {
       margin: 0 auto;
-      width: 30px;
-      height: 30px;
       padding-bottom: 50px;
+      width: 50px;
+      @include transition;
+      .img-mouse {
+        display: block;
+        width: 30px;
+        height: 40px;
+        margin: 0 auto;
+        @include transition;
+
+        &:hover {
+          box-shadow: 0 0 10px rgba(255, 253, 253, 0.5);
+          border-radius: 15px;
+        }
+      }
     }
   }
 }
