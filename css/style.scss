@@ -227,6 +227,42 @@ h2 {
     margin: 0 auto;
     padding: 110px 0;
     display: flex;
+
+    #service-slider {
+      max-width: 1100px;
+      overflow: hidden;
+      display: flex;
+
+      .splide__pagination {
+        display: none;
+        position: absolute;
+      }
+
+      .slider-navigation {
+        margin-left: initial;
+        padding-left: 3px;
+        .splide__arrow {
+          // --- kill style arrow slider
+          position: initial;
+          z-index: initial;
+          top: initial;
+          transform: initial;
+          width: initial;
+          height: initial;
+          border-radius: initial;
+          align-items: initial;
+          justify-content: initial;
+          border: initial;
+          padding: initial;
+          opacity: initial;
+          background: initial;
+          // --- kill style arrow slider
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
     .slider {
       width: 100%;
       .slide-item {
@@ -419,7 +455,6 @@ h2 {
 
 .map {
   &--section-inner {
-
     height: 450px;
     background: url("/img/map.png");
     background-size: cover;
@@ -445,10 +480,12 @@ h2 {
       line-height: 16px;
     }
 
-    .company-email{
+    .company-email {
       padding-top: 5px;
     }
   }
 }
 
 // ===== / ABOUT_COMPANY =====
+
+// slider

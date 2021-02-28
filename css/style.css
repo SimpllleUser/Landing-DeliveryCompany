@@ -151,6 +151,32 @@ h2 {
     margin: 0 auto;
     padding: 110px 0;
     display: flex; }
+    .services--section-inner #service-slider {
+      max-width: 1100px;
+      overflow: hidden;
+      display: flex; }
+      .services--section-inner #service-slider .splide__pagination {
+        display: none;
+        position: absolute; }
+      .services--section-inner #service-slider .slider-navigation {
+        margin-left: initial;
+        padding-left: 3px; }
+        .services--section-inner #service-slider .slider-navigation .splide__arrow {
+          position: initial;
+          z-index: initial;
+          top: initial;
+          transform: initial;
+          width: initial;
+          height: initial;
+          border-radius: initial;
+          align-items: initial;
+          justify-content: initial;
+          border: initial;
+          padding: initial;
+          opacity: initial;
+          background: initial;
+          display: flex;
+          align-items: center; }
     .services--section-inner .slider {
       width: 100%; }
       .services--section-inner .slider .slide-item {
