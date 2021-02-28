@@ -468,17 +468,24 @@ h2 {
   }
 }
 
+// ===== / ABOUT_COMPANY =====
+
+// =====  MAP =====
+
 .map {
   &--section-inner {
     height: 450px;
     background: url("/img/map.png");
     background-size: cover;
     background-repeat: no-repeat;
-    // .image-map {
-    //   width: 100%;
-    // }
+
   }
 }
+
+// ===== / MAP =====
+
+// ===== / FOOTER =====
+
 .footer {
   background-color: $secondary;
   &--section-inner {
@@ -501,6 +508,5 @@ h2 {
   }
 }
 
-// ===== / ABOUT_COMPANY =====
+// ===== / FOOTER =====
 
-// slider
