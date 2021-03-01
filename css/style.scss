@@ -17,7 +17,7 @@ $bg-light: #393f47;
 }
 
 @mixin dbg($color) {
-  border: 1px solid $color;
+  border: 1px solid $color !important;
 }
 // ===== / MIXINS =====
 
@@ -95,6 +95,37 @@ h2 {
   left: 0;
   right: 0;
 }
+
+@keyframes btn_next {
+  
+  0% {
+    padding-right: 50px;
+  }
+
+  50% {
+    padding-right: 10px;
+  }
+
+  100% {
+    padding-right: 50px;
+  }
+}
+
+@keyframes btn_prev {
+  
+  0% {
+    margin-left: 0px;
+  }
+
+  50% {
+    margin-left: 30px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
 
 // ===== / COMMON =====
 
@@ -254,18 +285,14 @@ h2 {
       //  /--- kill dots
 
       .slider-navigation {
-        margin-left: initial;
-        padding-left: 3px;
         .splide__arrow {
           // --- kill style arrow slider
           position: initial;
           z-index: initial;
           top: initial;
           transform: initial;
-          width: initial;
           height: initial;
           border-radius: initial;
-          align-items: initial;
           justify-content: initial;
           border: initial;
           padding: initial;
@@ -274,7 +301,9 @@ h2 {
           // --- kill style arrow slider
           display: flex;
           align-items: center;
+          width: 160px;
         }
+        // padding-left: 3px;
       }
     }
 
@@ -303,12 +332,12 @@ h2 {
     }
     .slider-navigation {
       margin-top: 10px;
-      height: 320px;
       margin-left: auto;
+      height: 320px;
+      width: calc(100% + 40px);
       .slider-navigation__btn + .slider-navigation__btn {
         margin-top: 16rem;
       }
-      padding-left: 30px;
       &__btn {
         color: $secondary;
         text-transform: uppercase;
@@ -317,18 +346,35 @@ h2 {
         font-size: 16px;
         display: flex;
         max-width: 160px;
+        @include transition;
+      }
+
+      #btn-prev.prev{
+        .prev-text{
+          margin-left: auto;
+        }
         .arrow-left {
           transform: rotate(180deg);
         }
-        .next {
-          &-text {
-            padding-right: 30px;
+        &:hover{
+          .arrow-left {
+            animation: 1.5s infinite  btn_prev;
           }
         }
-        .arrow-left {
-          padding-left: 30px;
+      }
+
+      
+      #btn-next.next{
+        .next-text{
+          padding-right: 50px;
+        }
+        &:hover{
+        .next-text{
+            animation: 1.5s infinite  btn_next;
+          }
         }
       }
+
     }
   }
 }
