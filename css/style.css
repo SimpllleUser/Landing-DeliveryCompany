@@ -3,6 +3,7 @@ body {
   font-family: "Roboto", sans-serif; }
 
 .link {
+  transition: color 0.3s;
   text-decoration: none;
   color: white; }
 
@@ -101,7 +102,10 @@ h2 {
       .top-line--section-inner .languages .active {
         color: white; }
     .top-line--section-inner .contact .link {
-      font-size: 12px; }
+      font-size: 12px;
+      transition: 0.3s; }
+      .top-line--section-inner .contact .link:hover {
+        color: rgba(255, 255, 255, 0.5); }
 
 .first-line {
   padding: 10px 0;
@@ -126,6 +130,9 @@ h2 {
       align-items: center; }
       .first-line--section-inner .navbar-nav .nav-item + .nav-item {
         margin-left: 32px; }
+      .first-line--section-inner .navbar-nav .link:hover {
+        transition: 0.3s;
+        color: rgba(255, 255, 255, 0.5); }
 
 .first-screen {
   background: url("/img/bg-first-screen.png");
@@ -234,11 +241,11 @@ h2 {
       .services--section-inner .slider-navigation #btn-prev.prev .arrow-left {
         transform: rotate(180deg); }
       .services--section-inner .slider-navigation #btn-prev.prev:hover .arrow-left {
-        animation: 1.5s infinite  btn_prev; }
+        animation: 1.5s infinite btn_prev; }
       .services--section-inner .slider-navigation #btn-next.next .next-text {
         padding-right: 50px; }
       .services--section-inner .slider-navigation #btn-next.next:hover .next-text {
-        animation: 1.5s infinite  btn_next; }
+        animation: 1.5s infinite btn_next; }
 
 .all-services {
   background-color: #2f343a; }
@@ -357,4 +364,9 @@ h2 {
       font-size: 14px;
       line-height: 16px; }
     .footer--section-inner .company-email {
-      padding-top: 5px; }
+      padding-top: 5px;
+      transition: 0.3s; }
+      .footer--section-inner .company-email:hover {
+        opacity: 0.7; }
+    .footer--section-inner .phones .link:hover {
+      color: rgba(255, 255, 255, 0.5); }

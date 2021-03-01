@@ -27,6 +27,7 @@ body {
 }
 
 .link {
+  transition: color 0.3s;
   text-decoration: none;
   color: white;
 }
@@ -97,7 +98,6 @@ h2 {
 }
 
 @keyframes btn_next {
-  
   0% {
     padding-right: 50px;
   }
@@ -112,7 +112,6 @@ h2 {
 }
 
 @keyframes btn_prev {
-  
   0% {
     margin-left: 0px;
   }
@@ -125,7 +124,6 @@ h2 {
     margin-left: 0px;
   }
 }
-
 
 // ===== / COMMON =====
 
@@ -163,6 +161,10 @@ h2 {
     .contact {
       .link {
         font-size: 12px;
+        transition: 0.3s;
+        &:hover {
+          color: rgba(255, 255, 255, 0.5);
+        }
       }
     }
   }
@@ -199,6 +201,10 @@ h2 {
       align-items: center;
       .nav-item + .nav-item {
         margin-left: 32px;
+      }
+      .link:hover {
+        @include transition;
+        color: rgba(255, 255, 255, 0.5);
       }
     }
   }
@@ -349,32 +355,30 @@ h2 {
         @include transition;
       }
 
-      #btn-prev.prev{
-        .prev-text{
+      #btn-prev.prev {
+        .prev-text {
           margin-left: auto;
         }
         .arrow-left {
           transform: rotate(180deg);
         }
-        &:hover{
+        &:hover {
           .arrow-left {
-            animation: 1.5s infinite  btn_prev;
+            animation: 1.5s infinite btn_prev;
           }
         }
       }
 
-      
-      #btn-next.next{
-        .next-text{
+      #btn-next.next {
+        .next-text {
           padding-right: 50px;
         }
-        &:hover{
-        .next-text{
-            animation: 1.5s infinite  btn_next;
+        &:hover {
+          .next-text {
+            animation: 1.5s infinite btn_next;
           }
         }
       }
-
     }
   }
 }
@@ -524,7 +528,6 @@ h2 {
     background: url("/img/map.png");
     background-size: cover;
     background-repeat: no-repeat;
-
   }
 }
 
@@ -550,9 +553,18 @@ h2 {
 
     .company-email {
       padding-top: 5px;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .phones {
+      .link:hover {
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
   }
 }
 
 // ===== / FOOTER =====
-
