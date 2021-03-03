@@ -67,6 +67,23 @@ h2 {
 .burger-btn {
   display: none; }
 
+body:before {
+  content: ' ';
+  opacity: 0; }
+
+body[data="modal-show"] {
+  overflow: hidden;
+  transition: .3s; }
+  body[data="modal-show"]:before {
+    opacity: 1;
+    transition: .3s;
+    content: ' ';
+    background-color: rgba(0, 0, 0, 0.645);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 9; }
+
 @keyframes btn_next {
   0% {
     padding-right: 50px; }
