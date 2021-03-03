@@ -710,7 +710,7 @@ h2 {
       text-align: center;
       min-width: 310px;
       z-index: 9;
-      margin-top: 10px;
+      margin-top: 150px;
       .nav-bar--header {
         color: rgba(255, 255, 255, 0.878);
         padding: 15px 10px;
@@ -796,6 +796,7 @@ h2 {
       }
     }
   }
+}
 
   .services {
     &--section-inner {
@@ -874,7 +875,6 @@ h2 {
       }
     }
   }
-}
 
 @include screen_xs {
   .empty-rectangle {
@@ -920,6 +920,11 @@ h2 {
         }
       }
     }
+
+
+        .navbar-nav.mobile-navb-bar {
+          margin-top: 0px;
+        }
   }
   .first-screen {
     &--section-inner {

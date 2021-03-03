@@ -443,7 +443,7 @@ h2 {
     text-align: center;
     min-width: 310px;
     z-index: 9;
-    margin-top: 10px; }
+    margin-top: 150px; }
     .first-line--section-inner .navbar-nav.mobile-navb-bar .nav-bar--header {
       color: rgba(255, 255, 255, 0.878);
       padding: 15px 10px;
@@ -498,45 +498,52 @@ h2 {
     .first-screen--section-inner .screen-text--title {
       font-size: 32px; }
     .first-screen--section-inner .screen-text--sub-title {
-      font-size: 16px; }
-  .services--section-inner #service-slider .slider-navigation {
-    display: none; }
-  .services--section-inner #service-slider .splide__pagination {
-    display: block;
-    position: relative;
-    margin: 20px auto;
-    width: 50%; }
-  .all-services--section-inner .section--text__title {
+      font-size: 16px; } }
+
+.services--section-inner #service-slider .slider-navigation {
+  display: none; }
+
+.services--section-inner #service-slider .splide__pagination {
+  display: block;
+  position: relative;
+  margin: 20px auto;
+  width: 50%; }
+
+.all-services--section-inner .section--text__title {
+  font-size: 28px; }
+
+.all-services--section-inner .all-services .all-services-item {
+  width: 132px;
+  height: 62px;
+  padding-top: initial;
+  padding: 25px; }
+  .all-services--section-inner .all-services .all-services-item__title {
+    font-size: 14px;
+    padding-top: initial; }
+
+.about-compnay--section-inner {
+  padding: 0 30px; }
+  .about-compnay--section-inner .section--text__title {
     font-size: 28px; }
-  .all-services--section-inner .all-services .all-services-item {
-    width: 132px;
-    height: 62px;
-    padding-top: initial;
-    padding: 25px; }
-    .all-services--section-inner .all-services .all-services-item__title {
-      font-size: 14px;
-      padding-top: initial; }
-  .about-compnay--section-inner {
-    padding: 0 30px; }
-    .about-compnay--section-inner .section--text__title {
-      font-size: 28px; }
-    .about-compnay--section-inner .info-cards__item {
+  .about-compnay--section-inner .info-cards__item {
+    width: 150px;
+    height: 120px; }
+    .about-compnay--section-inner .info-cards__item--quantity {
+      font-size: 48px; }
+    .about-compnay--section-inner .info-cards__item .big-car {
       width: 150px;
       height: 120px; }
-      .about-compnay--section-inner .info-cards__item--quantity {
-        font-size: 48px; }
-      .about-compnay--section-inner .info-cards__item .big-car {
-        width: 150px;
-        height: 120px; }
-  .map--section-inner {
-    height: 320px; }
-  .footer--section-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px; }
-    .footer--section-inner div {
-      width: 100%;
-      padding-bottom: 15px; } }
+
+.map--section-inner {
+  height: 320px; }
+
+.footer--section-inner {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px; }
+  .footer--section-inner div {
+    width: 100%;
+    padding-bottom: 15px; }
 
 @media (max-width: 576px) {
   .empty-rectangle {
@@ -569,6 +576,8 @@ h2 {
           margin: 0 auto; }
       .first-line--section-inner .links-to-office--link {
         display: none; }
+    .first-line .navbar-nav.mobile-navb-bar {
+      margin-top: 0px; }
   .first-screen--section-inner {
     padding: 55px 10px; }
     .first-screen--section-inner .screen-text--title {
