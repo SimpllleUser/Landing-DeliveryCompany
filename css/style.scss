@@ -136,6 +136,13 @@ h2 {
   right: 0;
 }
 
+.nav-bar--header {
+  display: none;
+}
+.burger-btn {
+  display: none;
+}
+
 @keyframes btn_next {
   0% {
     padding-right: 50px;
@@ -678,7 +685,63 @@ h2 {
       margin-left: auto;
     }
     .navbar-nav {
+      transition: 1s;
       display: none;
+      opacity: 0;
+    }
+
+    .nav-bar--header {
+      display: block;
+    }
+
+    .navbar-nav.mobile-navb-bar {
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      cursor: pointer;
+      position: fixed;
+      max-width: 90%;
+      margin: 0 auto;
+      background-color: $bg-dark;
+      border: 1px solid $secondary;
+      height: auto;
+      text-align: center;
+      min-width: 310px;
+      z-index: 9;
+      margin-top: 10px;
+      .nav-bar--header {
+        color: rgba(255, 255, 255, 0.878);
+        padding: 15px 10px;
+        border-bottom: 1px solid $secondary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        .hide-nav-bar {
+          padding: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 3px solid $secondary;
+          border-radius: 2px;
+          transition: 0.3s;
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+      }
+      .nav-item {
+        width: 100%;
+        margin: initial;
+        padding: 20px 0px;
+        transition: 0.3s;
+        border-bottom: 1px solid $secondary;
+        &:hover {
+          background-color: $bg-light;
+        }
+      }
     }
   }
 
@@ -875,13 +938,13 @@ h2 {
     &--section-inner {
       padding: 60px 0px;
       #service-slider.splide {
-        .slide-item{
+        .slide-item {
           flex-wrap: wrap;
           justify-content: center;
-          .section--text__body{
+          .section--text__body {
             font-size: 14px;
           }
-          .btn-secondary{
+          .btn-secondary {
             margin: 0 auto;
           }
         }
@@ -889,14 +952,12 @@ h2 {
     }
   }
 
-
-  .about-compnay--section-inner .info-cards__item{
+  .about-compnay--section-inner .info-cards__item {
     width: 120px;
-    .big-car{
+    .big-car {
       width: 120px;
     }
   }
-
 }
 
 // ===== / ADAPTIVE =====
