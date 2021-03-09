@@ -34,12 +34,12 @@ function scss(){
 
 function scripts() {
     console.log("scripts")
-    return gulp.src('./js/*.js',{allowEmpty:true})
+    return gulp.src('./js/*.js',
+        {allowEmpty:true})
         .pipe(babel({
             presets: ["@babel/preset-env"]
         }))
         .pipe(concat('script.js'))
-        .pipe(uglify({ toplevel: true }))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest('./dist/'))
         .pipe(browserSync.stream());

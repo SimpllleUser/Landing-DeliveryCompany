@@ -1,5 +1,4 @@
-console.log("Work main js")
-
+console.log("Work main js !")
 // ===== INTI SLIDER
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -12,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ===== / INTI SLIDER
 
-const showMobileMenu = async () => {
+ function showMobileMenu () {
+    console.log('!!!')
     const navBar = document.getElementsByClassName('navbar-nav')[0];
     navBar.style.display = 'block';
     navBar.setAttribute('class', navBar.getAttribute('class') + ' mobile-navb-bar')
@@ -22,7 +22,7 @@ const showMobileMenu = async () => {
     body.setAttribute('data', 'modal-show')
 }
 
-const hideMobileMenu = () => {
+ function hideMobileMenu() {
     const navBar = document.getElementsByClassName('navbar-nav')[0];
     navBar.style.opacity = '0';
 

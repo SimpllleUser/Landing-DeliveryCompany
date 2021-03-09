@@ -1,1 +1,36 @@
-"use strict";function c(e,t,n,a,r,s,o){try{var i=e[s](o),c=i.value}catch(e){return void n(e)}i.done?t(c):Promise.resolve(c).then(a,r)}console.log("Work main js"),document.addEventListener("DOMContentLoaded",function(){new Splide("#service-slider",{type:"loop"}).mount()});var e=function(){var i,e=(i=regeneratorRuntime.mark(function e(){var t;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:(t=document.getElementsByClassName("navbar-nav")[0]).style.display="block",t.setAttribute("class",t.getAttribute("class")+" mobile-navb-bar"),setTimeout(function(){t.style.opacity="1"},100),a.setAttribute("data","modal-show");case 5:case"end":return e.stop()}},e)}),function(){var e=this,o=arguments;return new Promise(function(t,n){var a=i.apply(e,o);function r(e){c(a,t,n,r,s,"next",e)}function s(e){c(a,t,n,r,s,"throw",e)}r(void 0)})});return function(){return e.apply(this,arguments)}}(),t=document.getElementsByClassName("burger-btn")[0],n=document.getElementsByClassName("hide-nav-bar")[0],a=document.getElementsByTagName("body")[0];t.addEventListener("click",e),n.addEventListener("click",function(){var e=document.getElementsByClassName("navbar-nav")[0];e.style.opacity="0",setTimeout(function(){e.setAttribute("class",e.getAttribute("class").replace("mobile-navb-bar","")),a.setAttribute("data",""),e.style.display="none"},300)});
+"use strict";
+
+console.log("Work main js !"); // ===== INTI SLIDER
+
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#service-slider', {
+    type: "loop"
+  }).mount();
+}); // ===== / INTI SLIDER
+
+function showMobileMenu() {
+  console.log('!!!');
+  var navBar = document.getElementsByClassName('navbar-nav')[0];
+  navBar.style.display = 'block';
+  navBar.setAttribute('class', navBar.getAttribute('class') + ' mobile-navb-bar');
+  setTimeout(function () {
+    navBar.style.opacity = '1';
+  }, 100);
+  body.setAttribute('data', 'modal-show');
+}
+
+function hideMobileMenu() {
+  var navBar = document.getElementsByClassName('navbar-nav')[0];
+  navBar.style.opacity = '0';
+  setTimeout(function () {
+    navBar.setAttribute('class', navBar.getAttribute('class').replace('mobile-navb-bar', ''));
+    body.setAttribute('data', '');
+    navBar.style.display = 'none';
+  }, 300);
+}
+
+var burgerBtn = document.getElementsByClassName('burger-btn')[0];
+var hideNavBar = document.getElementsByClassName('hide-nav-bar')[0];
+var body = document.getElementsByTagName('body')[0];
+burgerBtn.addEventListener('click', showMobileMenu);
+hideNavBar.addEventListener('click', hideMobileMenu);
