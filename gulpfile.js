@@ -51,7 +51,7 @@ function watch() {
             baseDir: "./"
         }
     });
-    gulp.watch('./css/*scss',scss)
+    gulp.watch('./scss/*scss',scss)
     gulp.watch('./js/*js', scripts);
     gulp.watch("./*.html").on('change', browserSync.reload);
 }
