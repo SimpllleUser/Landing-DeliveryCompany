@@ -24,7 +24,7 @@ function clean() {
 }
 
 function scss(){
-    return gulp.src('./css/**/*.scss',{allowEmpty:true})
+    return gulp.src('./scss/**/*.scss',{allowEmpty:true})
         .pipe(sass())
         .pipe(concat('style.css'))
         .pipe(cleanCSS({ level: 2 }))
