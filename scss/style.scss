@@ -637,7 +637,7 @@ h2 {
     &--section-inner {
       flex-wrap: wrap;
       justify-content: center;
-      max-width: 610px;
+      max-width: calc(100% - 100px);
       .section--text {
         max-width: 100%;
       }
@@ -645,7 +645,8 @@ h2 {
   }
 
   #service-slider.splide {
-    max-width: 800px;
+    max-width: calc(100% - 100px);
+    // max-width: 800px;
     overflow: hidden;
     display: flex;
     margin: 0 auto;
@@ -757,9 +758,9 @@ h2 {
   }
 
   #service-slider.splide {
-    max-width: 768px;
+    // max-width: 768px;
     ul#service-slider-list {
-      max-width: 768px;
+      // max-width: 768px;
       .slide-item {
         padding: 0px 15px;
         .section--text__title {
@@ -781,6 +782,25 @@ h2 {
       }
     }
   }
+
+  .all-services{
+    &--section-inner{
+      padding: 0 15px;
+      .section--text__title{
+        font-size: 28px;
+      }
+    }
+  }
+  
+  .about-compnay{
+    &--section-inner{
+      padding: 0 15px;
+      .section--text__title{
+        font-size: 28px;
+      }
+    }
+  }
+
 }
 
 @include screen_sm {
