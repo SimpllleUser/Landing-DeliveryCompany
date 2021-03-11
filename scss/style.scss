@@ -440,13 +440,13 @@ h2 {
     padding: 110px 0;
     max-width: 1110px;
     margin: 0 auto;
-    .all-services {
+    .all-services--list {
       padding-top: 60px;
       display: flex;
       flex-wrap: wrap;
       color: white;
       width: 100%;
-      .all-services-item {
+      &__item {
         width: 275px;
         height: 125px;
         padding-top: 55px;
@@ -667,7 +667,7 @@ h2 {
 
   .all-services {
     &--section-inner {
-      .all-services {
+      .all-services--list {
         justify-content: center;
       }
     }
@@ -857,8 +857,8 @@ h2 {
         }
       }
 
-      .all-services {
-        .all-services-item {
+      .all-services--list {
+        &__item {
           width: 132px;
           height: 62px;
           padding-top: initial;
@@ -992,9 +992,14 @@ h2 {
   .all-services{
     &--section-inner{
       max-width: calc(100% - 20px);
-      .all-services .block{
-        .all-services-item{
-          max-width: 120px !important;
+      .all-services--list{
+        flex-wrap: wrap;
+        &__item{
+          padding: 10px;
+          width: 112px;
+          &__title{
+            font-size: 12px;
+          }
         }
       } 
     }
