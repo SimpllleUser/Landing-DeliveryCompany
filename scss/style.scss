@@ -72,8 +72,9 @@ body[data="modal-show"] {
     content: ' ';
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
+    overflow: hidden;
     z-index: 9;
     transition: .3s;
   }
