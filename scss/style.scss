@@ -762,7 +762,7 @@ h2 {
     ul#service-slider-list {
       // max-width: 768px;
       .slide-item {
-        padding: 0px 15px;
+        // padding: 0px 15px;
         .section--text__title {
           font-size: 28px;
         }
@@ -784,6 +784,7 @@ h2 {
   }
 
   .all-services{
+    padding-top: 100px;
     &--section-inner{
       padding: 0 15px;
       .section--text__title{
@@ -793,6 +794,7 @@ h2 {
   }
   
   .about-compnay{
+    padding-top: 100px;
     &--section-inner{
       padding: 0 15px;
       .section--text__title{
@@ -821,6 +823,18 @@ h2 {
   .services {
     &--section-inner {
       #service-slider {
+
+        .slide-item{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+
+          .btn-secondary{
+            margin: 0 auto;
+          }
+        }
+
         .slider-navigation {
           display: none;
         }
@@ -906,6 +920,7 @@ h2 {
   .top-line {
     height: 100px;
     &--section-inner {
+      max-width: calc(100% - 20px);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -925,7 +940,7 @@ h2 {
       flex-wrap: wrap;
       justify-content: center;
       height: 100px;
-      max-width: 90%;
+      max-width: calc(100% - 20px);
       .company-logo {
         padding: initial;
         border-style: none;
@@ -936,6 +951,7 @@ h2 {
       }
 
       .links-to-office {
+        
         &--link {
           display: none;
         }
@@ -957,8 +973,8 @@ h2 {
   }
   .services {
     &--section-inner {
-      padding: 60px 0px;
       #service-slider.splide {
+        max-width: calc(100% - 20px);
         .slide-item {
           flex-wrap: wrap;
           justify-content: center;
@@ -973,12 +989,32 @@ h2 {
     }
   }
 
-  .about-compnay--section-inner .info-cards__item {
-    width: 120px;
-    .big-car {
-      width: 120px;
+  .all-services{
+    &--section-inner{
+      max-width: calc(100% - 20px);
+      .all-services .block{
+        .all-services-item{
+          max-width: 120px !important;
+        }
+      } 
     }
   }
+
+  .about-compnay{
+    &--section-inner{
+      max-width: calc(100% - 20px);
+      padding: 0 15px;
+    .info-cards__item {
+      width: 120px;
+      .big-car {
+        width: 120px;
+      }
+    }
+    }
+  }
+  // .about-compnay--section-inner {
+
+  // }
 }
 
 // ===== / ADAPTIVE =====
