@@ -7,11 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Delivery company</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/dist/style.css">
 </head>
 
-<body>
+<body class="body">
     <section class="section-wrapper top-line">
         <div class="top-line--section-inner">
 
@@ -41,14 +40,27 @@
 
             <div class="links-to-office">
                 <div class="links-to-office--icon">
-                    <img src="/img/geo-point.svg" alt="geo-point">
+                    <img class="geo-point-icon" src="/img/geo-point.svg" alt="geo-point">
                 </div>
                 <div class="links-to-office--link">
                     <a class="link" href="#">Наши офисы</a>
                 </div>
             </div>
-
+            <div class="burger-btn">
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="18" height="10" transform="translate(0 2)" fill="" />
+                    <line y1="11" x2="18" y2="11" stroke="white" stroke-width="2" />
+                    <line y1="6" x2="18" y2="6" stroke="white" stroke-width="2" />
+                    <line y1="1" x2="18" y2="1" stroke="white" stroke-width="2" />
+                </svg>
+            </div>
             <ul class="navbar-nav">
+                <div class="nav-bar--header">
+                    <h2>Меню</h2>
+                    <div class="hide-nav-bar">
+                        <img src="/img/clsoe-btn.svg" alt="hide">
+                    </div>
+                </div>
                 <li class="nav-item"><a href="#" class="link">Услуги</a></li>
                 <li class="nav-item"><a href="#" class="link">О компании</a></li>
                 <li class="nav-item"><a href="#" class="link">Вакансии</a></li>
@@ -77,7 +89,7 @@
 
 
             <div id="service-slider" class="splide">
-        
+
                 <div class="splide__track">
                     <ul class="slider splide__list">
                         <li class="slide-item splide__slide">
@@ -162,9 +174,9 @@
                 <h2 class="section--text__title">Услуги</h2>
             </div>
 
-            <div class="all-services">
-                <div class="all-services-item">
-                    <div class="all-services-item__img">
+            <div class="all-services--list">
+                <div class="all-services--list__item">
+                    <div class="all-services--list__item__img">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.8925 0.0731753L25.718 1.51814C25.5147 1.61197 25.327 1.7402 25.1675 1.89971L19.9944 7.07594L2.17944 4.93977C1.8573 4.90224 1.53202 5.01171 1.30371 5.24315L0.312246 6.23461C-0.213196 6.76005 -0.0505593 7.6483 0.628137 7.95168L13.3951 13.6752L9.72955 17.3408H3.32728C3.0458 17.3408 2.77682 17.4534 2.57665 17.6504L2.04183 18.1884C1.51013 18.7201 1.68528 19.6177 2.37336 19.9117L7.77478 22.2262L10.0892 27.6276C10.3832 28.3157 11.284 28.4908 11.8126 27.9591L12.3505 27.4212C12.5507 27.221 12.6601 26.952 12.6601 26.6706V20.2683L16.3257 16.6027L22.0493 29.3729C22.3527 30.0515 23.2409 30.2142 23.7663 29.6888L24.7578 28.6973C24.9892 28.4659 25.0987 28.1437 25.0612 27.8216L22.9219 10.0066L28.0981 4.83034C28.2576 4.67083 28.3858 4.4863 28.4797 4.27987L29.9246 1.10533C30.2281 0.451619 29.5525 -0.227077 28.8925 0.0731753Z"
@@ -172,12 +184,12 @@
                         </svg>
 
                     </div>
-                    <div class="all-services-item__title">
+                    <div class="all-services--list__item__title">
                         Авиаперевозки
                     </div>
                 </div>
-                <div class="all-services-item">
-                    <div class="all-services-item__img">
+                <div class="all-services--list__item">
+                    <div class="all-services--list__item__img">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.8925 0.0731753L25.718 1.51814C25.5147 1.61197 25.327 1.7402 25.1675 1.89971L19.9944 7.07594L2.17944 4.93977C1.8573 4.90224 1.53202 5.01171 1.30371 5.24315L0.312246 6.23461C-0.213196 6.76005 -0.0505593 7.6483 0.628137 7.95168L13.3951 13.6752L9.72955 17.3408H3.32728C3.0458 17.3408 2.77682 17.4534 2.57665 17.6504L2.04183 18.1884C1.51013 18.7201 1.68528 19.6177 2.37336 19.9117L7.77478 22.2262L10.0892 27.6276C10.3832 28.3157 11.284 28.4908 11.8126 27.9591L12.3505 27.4212C12.5507 27.221 12.6601 26.952 12.6601 26.6706V20.2683L16.3257 16.6027L22.0493 29.3729C22.3527 30.0515 23.2409 30.2142 23.7663 29.6888L24.7578 28.6973C24.9892 28.4659 25.0987 28.1437 25.0612 27.8216L22.9219 10.0066L28.0981 4.83034C28.2576 4.67083 28.3858 4.4863 28.4797 4.27987L29.9246 1.10533C30.2281 0.451619 29.5525 -0.227077 28.8925 0.0731753Z"
@@ -185,12 +197,12 @@
                         </svg>
 
                     </div>
-                    <div class="all-services-item__title">
+                    <div class="all-services--list__item__title">
                         Авиаперевозки
                     </div>
                 </div>
-                <div class="all-services-item">
-                    <div class="all-services-item__img">
+                <div class="all-services--list__item">
+                    <div class="all-services--list__item__img">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.8925 0.0731753L25.718 1.51814C25.5147 1.61197 25.327 1.7402 25.1675 1.89971L19.9944 7.07594L2.17944 4.93977C1.8573 4.90224 1.53202 5.01171 1.30371 5.24315L0.312246 6.23461C-0.213196 6.76005 -0.0505593 7.6483 0.628137 7.95168L13.3951 13.6752L9.72955 17.3408H3.32728C3.0458 17.3408 2.77682 17.4534 2.57665 17.6504L2.04183 18.1884C1.51013 18.7201 1.68528 19.6177 2.37336 19.9117L7.77478 22.2262L10.0892 27.6276C10.3832 28.3157 11.284 28.4908 11.8126 27.9591L12.3505 27.4212C12.5507 27.221 12.6601 26.952 12.6601 26.6706V20.2683L16.3257 16.6027L22.0493 29.3729C22.3527 30.0515 23.2409 30.2142 23.7663 29.6888L24.7578 28.6973C24.9892 28.4659 25.0987 28.1437 25.0612 27.8216L22.9219 10.0066L28.0981 4.83034C28.2576 4.67083 28.3858 4.4863 28.4797 4.27987L29.9246 1.10533C30.2281 0.451619 29.5525 -0.227077 28.8925 0.0731753Z"
@@ -198,12 +210,12 @@
                         </svg>
 
                     </div>
-                    <div class="all-services-item__title">
+                    <div class="all-services--list__item__title">
                         Авиаперевозки
                     </div>
                 </div>
-                <div class="all-services-item">
-                    <div class="all-services-item__img">
+                <div class="all-services--list__item">
+                    <div class="all-services--list__item__img">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.8925 0.0731753L25.718 1.51814C25.5147 1.61197 25.327 1.7402 25.1675 1.89971L19.9944 7.07594L2.17944 4.93977C1.8573 4.90224 1.53202 5.01171 1.30371 5.24315L0.312246 6.23461C-0.213196 6.76005 -0.0505593 7.6483 0.628137 7.95168L13.3951 13.6752L9.72955 17.3408H3.32728C3.0458 17.3408 2.77682 17.4534 2.57665 17.6504L2.04183 18.1884C1.51013 18.7201 1.68528 19.6177 2.37336 19.9117L7.77478 22.2262L10.0892 27.6276C10.3832 28.3157 11.284 28.4908 11.8126 27.9591L12.3505 27.4212C12.5507 27.221 12.6601 26.952 12.6601 26.6706V20.2683L16.3257 16.6027L22.0493 29.3729C22.3527 30.0515 23.2409 30.2142 23.7663 29.6888L24.7578 28.6973C24.9892 28.4659 25.0987 28.1437 25.0612 27.8216L22.9219 10.0066L28.0981 4.83034C28.2576 4.67083 28.3858 4.4863 28.4797 4.27987L29.9246 1.10533C30.2281 0.451619 29.5525 -0.227077 28.8925 0.0731753Z"
@@ -211,12 +223,12 @@
                         </svg>
 
                     </div>
-                    <div class="all-services-item__title">
+                    <div class="all-services--list__item__title">
                         Авиаперевозки
                     </div>
                 </div>
-                <div class="all-services-item">
-                    <div class="all-services-item__img">
+                <div class="all-services--list__item">
+                    <div class="all-services--list__item__img">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.8925 0.0731753L25.718 1.51814C25.5147 1.61197 25.327 1.7402 25.1675 1.89971L19.9944 7.07594L2.17944 4.93977C1.8573 4.90224 1.53202 5.01171 1.30371 5.24315L0.312246 6.23461C-0.213196 6.76005 -0.0505593 7.6483 0.628137 7.95168L13.3951 13.6752L9.72955 17.3408H3.32728C3.0458 17.3408 2.77682 17.4534 2.57665 17.6504L2.04183 18.1884C1.51013 18.7201 1.68528 19.6177 2.37336 19.9117L7.77478 22.2262L10.0892 27.6276C10.3832 28.3157 11.284 28.4908 11.8126 27.9591L12.3505 27.4212C12.5507 27.221 12.6601 26.952 12.6601 26.6706V20.2683L16.3257 16.6027L22.0493 29.3729C22.3527 30.0515 23.2409 30.2142 23.7663 29.6888L24.7578 28.6973C24.9892 28.4659 25.0987 28.1437 25.0612 27.8216L22.9219 10.0066L28.0981 4.83034C28.2576 4.67083 28.3858 4.4863 28.4797 4.27987L29.9246 1.10533C30.2281 0.451619 29.5525 -0.227077 28.8925 0.0731753Z"
@@ -224,12 +236,12 @@
                         </svg>
 
                     </div>
-                    <div class="all-services-item__title">
+                    <div class="all-services--list__item__title">
                         Авиаперевозки
                     </div>
                 </div>
-                <div class="all-services-item">
-                    <div class="all-services-item__img">
+                <div class="all-services--list__item">
+                    <div class="all-services--list__item__img">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.8925 0.0731753L25.718 1.51814C25.5147 1.61197 25.327 1.7402 25.1675 1.89971L19.9944 7.07594L2.17944 4.93977C1.8573 4.90224 1.53202 5.01171 1.30371 5.24315L0.312246 6.23461C-0.213196 6.76005 -0.0505593 7.6483 0.628137 7.95168L13.3951 13.6752L9.72955 17.3408H3.32728C3.0458 17.3408 2.77682 17.4534 2.57665 17.6504L2.04183 18.1884C1.51013 18.7201 1.68528 19.6177 2.37336 19.9117L7.77478 22.2262L10.0892 27.6276C10.3832 28.3157 11.284 28.4908 11.8126 27.9591L12.3505 27.4212C12.5507 27.221 12.6601 26.952 12.6601 26.6706V20.2683L16.3257 16.6027L22.0493 29.3729C22.3527 30.0515 23.2409 30.2142 23.7663 29.6888L24.7578 28.6973C24.9892 28.4659 25.0987 28.1437 25.0612 27.8216L22.9219 10.0066L28.0981 4.83034C28.2576 4.67083 28.3858 4.4863 28.4797 4.27987L29.9246 1.10533C30.2281 0.451619 29.5525 -0.227077 28.8925 0.0731753Z"
@@ -237,12 +249,12 @@
                         </svg>
 
                     </div>
-                    <div class="all-services-item__title">
+                    <div class="all-services--list__item__title">
                         Авиаперевозки
                     </div>
                 </div>
-                <div class="all-services-item">
-                    <div class="all-services-item__img">
+                <div class="all-services--list__item">
+                    <div class="all-services--list__item__img">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.8925 0.0731753L25.718 1.51814C25.5147 1.61197 25.327 1.7402 25.1675 1.89971L19.9944 7.07594L2.17944 4.93977C1.8573 4.90224 1.53202 5.01171 1.30371 5.24315L0.312246 6.23461C-0.213196 6.76005 -0.0505593 7.6483 0.628137 7.95168L13.3951 13.6752L9.72955 17.3408H3.32728C3.0458 17.3408 2.77682 17.4534 2.57665 17.6504L2.04183 18.1884C1.51013 18.7201 1.68528 19.6177 2.37336 19.9117L7.77478 22.2262L10.0892 27.6276C10.3832 28.3157 11.284 28.4908 11.8126 27.9591L12.3505 27.4212C12.5507 27.221 12.6601 26.952 12.6601 26.6706V20.2683L16.3257 16.6027L22.0493 29.3729C22.3527 30.0515 23.2409 30.2142 23.7663 29.6888L24.7578 28.6973C24.9892 28.4659 25.0987 28.1437 25.0612 27.8216L22.9219 10.0066L28.0981 4.83034C28.2576 4.67083 28.3858 4.4863 28.4797 4.27987L29.9246 1.10533C30.2281 0.451619 29.5525 -0.227077 28.8925 0.0731753Z"
@@ -250,12 +262,12 @@
                         </svg>
 
                     </div>
-                    <div class="all-services-item__title">
+                    <div class="all-services--list__item__title">
                         Авиаперевозки
                     </div>
                 </div>
-                <div class="all-services-item">
-                    <div class="all-services-item__img">
+                <div class="all-services--list__item">
+                    <div class="all-services--list__item__img">
                         <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M28.8925 0.0731753L25.718 1.51814C25.5147 1.61197 25.327 1.7402 25.1675 1.89971L19.9944 7.07594L2.17944 4.93977C1.8573 4.90224 1.53202 5.01171 1.30371 5.24315L0.312246 6.23461C-0.213196 6.76005 -0.0505593 7.6483 0.628137 7.95168L13.3951 13.6752L9.72955 17.3408H3.32728C3.0458 17.3408 2.77682 17.4534 2.57665 17.6504L2.04183 18.1884C1.51013 18.7201 1.68528 19.6177 2.37336 19.9117L7.77478 22.2262L10.0892 27.6276C10.3832 28.3157 11.284 28.4908 11.8126 27.9591L12.3505 27.4212C12.5507 27.221 12.6601 26.952 12.6601 26.6706V20.2683L16.3257 16.6027L22.0493 29.3729C22.3527 30.0515 23.2409 30.2142 23.7663 29.6888L24.7578 28.6973C24.9892 28.4659 25.0987 28.1437 25.0612 27.8216L22.9219 10.0066L28.0981 4.83034C28.2576 4.67083 28.3858 4.4863 28.4797 4.27987L29.9246 1.10533C30.2281 0.451619 29.5525 -0.227077 28.8925 0.0731753Z"
@@ -263,7 +275,7 @@
                         </svg>
 
                     </div>
-                    <div class="all-services-item__title">
+                    <div class="all-services--list__item__title">
                         Авиаперевозки
                     </div>
                 </div>
@@ -336,12 +348,13 @@
     </section>
     <section class="section-wrapper map">
         <div class="map--section-inner">
+            <!-- <img class="image-map" src="/img/map.png" alt="map"> -->
         </div>
     </section>
     <section class="section-wrapper footer">
         <div class="footer--section-inner">
             <div class="company-logo">
-                <img src="/img/company-footer-logo.png" alt="main-logo">
+                <img class="logo-img" src="/img/company-footer-logo.png" alt="main-logo">
             </div>
 
             <div class="base-contact">
@@ -363,7 +376,7 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/dist/script.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+@import "./normalize.scss";
 // ===== VARS =====
 
 $secondary: #c8a35f;
@@ -7,6 +8,45 @@ $bg-light: #393f47;
 // ===== / VARS =====
 
 // ===== MIXINS =====
+
+// xs 576px sm 576px md 768px lg 992px xl 1200px xxl 1400px
+
+@mixin screen_xxl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin screen_xl {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin screen_lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin screen_md {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin screen_sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen_xs {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
 @mixin roboto {
   font-family: "Roboto", sans-serif;
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
@@ -24,6 +64,20 @@ $bg-light: #393f47;
 // ===== COMMON =====
 body {
   @include roboto;
+}
+
+body[data="modal-show"] {
+  overflow: hidden;
+  &::before{
+    content: ' ';
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 200vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 9;
+    transition: .3s;
+  }
 }
 
 .link {
@@ -95,6 +149,13 @@ h2 {
   margin-right: auto;
   left: 0;
   right: 0;
+}
+
+.nav-bar--header {
+  display: none;
+}
+.burger-btn {
+  display: none;
 }
 
 @keyframes btn_next {
@@ -183,7 +244,7 @@ h2 {
     margin: 0 auto;
     padding: 5px 0;
     display: flex;
-
+    align-items: center;
     .company-logo {
       padding-right: 30px;
       border-right: 1px solid rgba(255, 255, 255, 0.5);
@@ -393,13 +454,13 @@ h2 {
     padding: 110px 0;
     max-width: 1110px;
     margin: 0 auto;
-    .all-services {
+    .all-services--list {
       padding-top: 60px;
       display: flex;
       flex-wrap: wrap;
       color: white;
       width: 100%;
-      .all-services-item {
+      &__item {
         width: 275px;
         height: 125px;
         padding-top: 55px;
@@ -459,7 +520,6 @@ h2 {
 .about-compnay {
   background-color: $bg-dark;
   padding: 5px 0px 120px;
-  //padding-bottom: ;
   &--section-inner {
     padding-top: 80px;
     position: relative;
@@ -568,3 +628,413 @@ h2 {
 }
 
 // ===== / FOOTER =====
+
+// ===== ADAPTIVE =====
+@include screen_lg {
+  .top-line--section-inner {
+    max-width: calc(100% - 100px);
+  }
+
+  .first-line--section-inner {
+    max-width: calc(100% - 100px);
+  }
+
+  .all-services--section-inner {
+    max-width: calc(100% - 100px);
+  }
+
+  .footer--section-inner {
+    max-width: calc(100% - 100px);
+  }
+
+  .about-compnay {
+    &--section-inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: calc(100% - 100px);
+      .section--text {
+        max-width: 100%;
+      }
+    }
+  }
+
+  #service-slider.splide {
+    max-width: calc(100% - 100px);
+    // max-width: 800px;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    .slider-navigation.splide__arrows {
+      margin-left: initial;
+      height: initial;
+      margin-top: 10px;
+      margin: 10px auto;
+      width: 160px;
+      #btn-prev.slider-navigation__btn {
+        margin-top: 15px;
+        padding: 20px inherit;
+      }
+    }
+  }
+
+  .all-services {
+    &--section-inner {
+      .all-services--list {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include screen_md {
+  .first-line--section-inner {
+    .burger-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 2px;
+      background-color: $secondary;
+      margin-left: auto;
+    }
+    .navbar-nav {
+      transition: 1s;
+      display: none;
+      opacity: 0;
+    }
+
+    .nav-bar--header {
+      display: block;
+    }
+
+    .navbar-nav.mobile-navb-bar {
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 5%;
+      cursor: pointer;
+      position: fixed;
+      max-width: 90%;
+      margin: 0 auto;
+      background-color: $bg-dark;
+      border: 1px solid $secondary;
+      height: auto;
+      text-align: center;
+      min-width: 310px;
+      z-index: 9;
+      margin-top: 10px;
+      .nav-bar--header {
+        color: rgba(255, 255, 255, 0.878);
+        padding: 15px 10px;
+        border-bottom: 1px solid $secondary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        .hide-nav-bar {
+          padding: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 3px solid $secondary;
+          border-radius: 2px;
+          transition: 0.3s;
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+      }
+      .nav-item {
+        width: 100%;
+        margin: initial;
+        padding: 20px 0px;
+        transition: 0.3s;
+        border-bottom: 1px solid $secondary;
+        &:hover {
+          background-color: $bg-light;
+        }
+      }
+    }
+  }
+
+  .first-screen--section-inner {
+    .screen-text {
+      max-width: 500px;
+      margin-bottom: 50px;
+    }
+    .screen-mouse {
+      padding-bottom: 20px;
+    }
+  }
+
+  #service-slider.splide {
+    // max-width: 768px;
+    ul#service-slider-list {
+      // max-width: 768px;
+      .slide-item {
+        // padding: 0px 15px;
+        .section--text__title {
+          font-size: 28px;
+        }
+        .section--text__bpdy {
+          font-size: 14px;
+        }
+
+        .slide-item__image .image-car {
+          height: auto;
+          width: 305px;
+        }
+
+        .btn-secondary {
+          padding: 15px 40px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .all-services{
+    padding-top: 100px;
+    &--section-inner{
+      padding: 0 15px;
+      .section--text__title{
+        font-size: 28px;
+      }
+    }
+  }
+  
+  .about-compnay{
+    padding-top: 100px;
+    &--section-inner{
+      padding: 0 15px;
+      .section--text__title{
+        font-size: 28px;
+      }
+    }
+  }
+
+}
+
+@include screen_sm {
+  .first-screen {
+    &--section-inner {
+      .screen-text {
+        padding: 25px 20px;
+        &--title {
+          font-size: 32px;
+        }
+        &--sub-title {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .services {
+    &--section-inner {
+      #service-slider {
+
+        .slide-item{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+
+          .btn-secondary{
+            margin: 0 auto;
+          }
+        }
+
+        .slider-navigation {
+          display: none;
+        }
+
+        .splide__pagination {
+          display: block;
+          position: relative;
+          margin: 20px auto;
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .all-services {
+    &--section-inner {
+      .section--text {
+        &__title {
+          font-size: 28px;
+        }
+      }
+
+      .all-services--list {
+        &__item {
+          width: 132px;
+          height: 62px;
+          padding-top: initial;
+          padding: 25px;
+          &__title {
+            font-size: 14px;
+            padding-top: initial;
+          }
+        }
+      }
+    }
+  }
+
+  .about-compnay {
+    &--section-inner {
+      padding: 0 30px;
+      .section--text__title {
+        font-size: 28px;
+      }
+      .info-cards {
+        &__item {
+          width: 150px;
+          height: 120px;
+          &--quantity {
+            font-size: 48px;
+          }
+          .big-car {
+            width: 150px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+
+  .map--section-inner {
+    height: 320px;
+  }
+
+  .footer {
+    &--section-inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+      div {
+        width: 100%;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+@include screen_xs {
+  .empty-rectangle {
+    max-width: 60%;
+    height: 360px;
+  }
+
+  .top-line {
+    height: 100px;
+    &--section-inner {
+      max-width: calc(100% - 20px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .languages,
+      .contact {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .first-line {
+    height: initial;
+    &--section-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 100px;
+      max-width: calc(100% - 20px);
+      .company-logo {
+        padding: initial;
+        border-style: none;
+        .logo-img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      .links-to-office {
+        
+        &--link {
+          display: none;
+        }
+      }
+    }
+  }
+  .first-screen {
+    &--section-inner {
+      padding: 55px 10px;
+      .screen-text {
+        &--title {
+          font-size: 22px;
+        }
+        &--sub-title {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .services {
+    &--section-inner {
+      #service-slider.splide {
+        max-width: calc(100% - 20px);
+        .slide-item {
+          flex-wrap: wrap;
+          justify-content: center;
+          .section--text__body {
+            font-size: 14px;
+          }
+          .btn-secondary {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+  .all-services{
+    &--section-inner{
+      max-width: calc(100% - 20px);
+      .all-services--list{
+        flex-wrap: wrap;
+        &__item{
+          padding: 10px;
+          width: 112px;
+          &__title{
+            font-size: 12px;
+          }
+        }
+      } 
+    }
+  }
+
+  .about-compnay{
+    &--section-inner{
+      max-width: calc(100% - 20px);
+      padding: 0 15px;
+    .info-cards__item {
+      width: 120px;
+      .big-car {
+        width: 120px;
+      }
+    }
+    }
+  }
+  // .about-compnay--section-inner {
+
+  // }
+}
+
+// ===== / ADAPTIVE =====
